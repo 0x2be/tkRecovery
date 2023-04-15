@@ -21,7 +21,7 @@ font.families()
 # while checkstatus == 1:
 #     devicestatus = deviceconnected()
 # 
-rootWin.title('tkRecovery (0x3ff, a fast audi r8)')
+rootWin.title('tkRecovery (0x2be, a fast audi r8)')
 rootWin.geometry('500x175')
 
 # tk gui defined items
