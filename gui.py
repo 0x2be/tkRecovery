@@ -77,6 +77,7 @@ deviceinfo_menu.add_command(
     command=openNewWindow
 )
 
+
 # cascade buttons
 
 menubar.add_cascade(
