@@ -17,18 +17,13 @@ Once you want to exit from recovery, just click on "Exit recovery".
 
 ## tk:
 
-Since this GUI was made with tkinter, you will need to install tk. For this, you will need to install Homebrew from https://brew.sh/ and then execute `brew install python-tk` in the Terminal.
+You will need to install tk with Homebrew. For this, you will need to install Homebrew from https://brew.sh/ and then execute `brew install python-tk` in the Terminal.
 
-## MacOS installation
+## Installation:
 ### libimobiledevice:
 
 Now that you installed Homebrew, you are now able to install libimobiledevice (what makes the app enter/exit recovery). To start off, type `brew install libimobiledevice`. This will start the installation of libimobiledevice.
 
-## Linux installation
-### libimobiledevice:
-
-To install libimobiledevice on Linux, follow steps here: https://libimobiledevice.org/#get-started
-
-### tkRecovery itself:
+### tkRecovery:
 
 There is already a prealpha of the GUI so you can try it out.
