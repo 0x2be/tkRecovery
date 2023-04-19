@@ -9,26 +9,21 @@ Once you want to exit from recovery, just click on "Exit recovery".
 
 # Requirements
 
-- Mac device
-- MacPorts (for installation)
-- libimobiledevice (for the tool to work)
+- Mac/Linux device
+- Homebrew
+- libimobiledevice
 
 # Installation
 
-### MacPorts: 
+## tk:
 
-To install tkRecovery, you first need to install Apple's Command Line Developer Tools with `xcode-select --install`
-Then, install MacPorts for your version of the Mac operating system:
-- [Ventura (13)](https://github.com/macports/macports-base/releases/download/v2.8.1/MacPorts-2.8.1-13-Ventura.pkg)
-- [Monterey (12)](https://github.com/macports/macports-base/releases/download/v2.8.1/MacPorts-2.8.1-12-Monterey.pkg)
-- [Big Sur (11)](https://github.com/macports/macports-base/releases/download/v2.8.1/MacPorts-2.8.1-11-BigSur.pkg)
-- [Catalina (10.15)](https://github.com/macports/macports-base/releases/download/v2.8.1/MacPorts-2.8.1-10.15-Catalina.pkg)
-- [Older OS? See here.](https://www.macports.org/install.php#installing)
+You will need to install tk with Homebrew. For this, you will need to install Homebrew from https://brew.sh/ and then execute `brew install python-tk` in the Terminal.
 
+## Installation:
 ### libimobiledevice:
 
-Now that you installed MacPorts, you are now able to install libimobiledevice (what makes the app enter/exit recovery). To start off, type `sudo port install libimobiledevice`. This will start the installation of libimobiledevice.
+Now that you installed Homebrew, you are now able to install libimobiledevice (what makes the app enter/exit recovery). To start off, type `brew install libimobiledevice`. This will start the installation of libimobiledevice.
 
-### tkRecovery itself
+### tkRecovery:
 
-Currently there are no downloads. You can check on this page later on or you can [join the Discord](https://discord.gg/vE3sJaWhgF) to be updated on progress.
+There is already a prealpha of the GUI so you can try it out.
