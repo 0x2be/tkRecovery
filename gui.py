@@ -7,6 +7,7 @@ import platform
 from tkinter import *
 from tkinter import Tk, font
 from tkinter import Menu
+from subprocess import Popen, PIPE
 
 import time
 
@@ -28,25 +29,55 @@ rootWin.geometry('500x175')
 
 
 def openNewWindow():
+    # Create a new window to display the device information
     infoWin = Toplevel(rootWin)
     infoWin.title("iDevice information")
     infoWin.geometry("250x175")
+
+    # Add labels to the window for the device information
     label = Label(infoWin, text="iDevice information", font=('System', 16))
     label.pack()
-    devicename = Label(infoWin, text="DEVICE_NAME", font=('System', 14))
+
+    devicename = Label(infoWin, text="Device Name:", font=('System', 12))
     devicename.pack()
+    devicenameval = Label(infoWin, text=get_device_name(), font=('System', 9))
+    devicenameval.pack()
+
     model = Label(infoWin, text="iPhone model:", font=('System', 12))
     model.pack()
-    modeln = Label(infoWin, text="MODEL", font=('System', 9))
+    modeln = Label(infoWin, text=get_device_model(), font=('System', 9))
     modeln.pack()
+
     serial = Label(infoWin, text="Serial Number:", font=('System', 12))
     serial.pack()
-    serialn = Label(infoWin, text="SERIAL_NUM", font=('System', 9))
+    serialn = Label(infoWin, text=get_device_serial_number(), font=('System', 9))
     serialn.pack()
+
     ios = Label(infoWin, text="iOS:", font=('System', 12))
     ios.pack()
-    iosv = Label(infoWin, text="IOS_VERSION", font=('System', 9))
+    iosv = Label(infoWin, text=get_device_ios_version(), font=('System', 9))
     iosv.pack()
+
+def get_device_name():
+    cmd = ["ideviceinfo", "-k", "DeviceName"]
+    return run_command(cmd).decode("utf-8").strip()
+
+def get_device_model():
+    cmd = ["ideviceinfo", "-k", "HardwareModel"]
+    return run_command(cmd).decode("utf-8").strip()
+
+def get_device_serial_number():
+    cmd = ["ideviceinfo", "-k", "SerialNumber"]
+    return run_command(cmd).decode("utf-8").strip()
+
+def get_device_ios_version():
+    cmd = ["ideviceinfo", "-k", "ProductVersion"]
+    return run_command(cmd).decode("utf-8").strip()
+
+def run_command(cmd):
+    proc = Popen(cmd, stdout=PIPE, stderr=PIPE)
+    output, error = proc.communicate()
+    return output
 
 def updatestatus():
     log.config(text=f'Status: {deviceconnected()}')
