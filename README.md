@@ -1,6 +1,6 @@
 # tkRecovery
 
-tkRecovery is a work-in-progress macOS program written with python (tkinter) to enter and exit recovery mode on iOS devices with ease. This is designed to easily re-install iOS with Finder and/or help you with the jailbreak process.
+tkRecovery is a work-in-progress program written with python (tkinter) to enter and exit recovery mode on iOS devices with ease. This is designed to easily re-install iOS with Finder and/or help you with the jailbreak process.
 
 # Usage
 
