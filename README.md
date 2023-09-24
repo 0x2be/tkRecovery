@@ -23,4 +23,4 @@ type `brew install libimobiledevice` in terminal to install libimobiledevice.
 
 ### tkRecovery:
 
-download the shitty release bruh
+download the release
